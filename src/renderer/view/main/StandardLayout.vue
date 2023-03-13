@@ -348,6 +348,5 @@ export default defineComponent({
 }
 button .icon {
   height: 100%;
-  vertical-align: top;
 }
 </style>

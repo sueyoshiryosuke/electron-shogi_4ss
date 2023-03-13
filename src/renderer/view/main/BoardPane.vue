@@ -483,6 +483,5 @@ export default defineComponent({
 }
 .control .control-item .icon {
   height: 68%;
-  vertical-align: top;
 }
 </style>

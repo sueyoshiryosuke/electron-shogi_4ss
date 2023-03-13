@@ -261,7 +261,6 @@ export default defineComponent({
 .control .control-item .icon {
   height: 80%;
   width: auto;
-  vertical-align: top;
 }
 .informations {
   height: 120px;

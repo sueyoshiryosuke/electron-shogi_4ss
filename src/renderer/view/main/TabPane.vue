@@ -184,7 +184,6 @@ export default defineComponent({
 }
 .tab .icon {
   height: 100%;
-  vertical-align: top;
 }
 .tab-contents {
   flex: 1;

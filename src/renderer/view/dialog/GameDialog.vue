@@ -39,7 +39,7 @@
           </button>
         </div>
       </div>
-      <div class="dialog-form-areas-h">
+      <div class="dialog-form-area-row row">
         <div class="dialog-form-area time-limit">
           <div class="top-label">{{ t.time }}</div>
           <div class="dialog-form-item">
@@ -392,7 +392,7 @@ export default defineComponent({
   text-align: center;
 }
 .dialog-form-area {
-  width: 520px;
+  width: 580px;
   display: flex;
   flex-direction: column;
 }
@@ -403,13 +403,16 @@ export default defineComponent({
   width: 100%;
 }
 .player {
-  width: 250px;
+  width: 280px;
 }
 .players-control {
   width: 100%;
 }
 .players-control > * {
   margin-top: 5px;
+}
+.row {
+  justify-content: space-between;
 }
 .dialog-form-area.time-limit {
   width: 260px;
@@ -423,6 +426,6 @@ input.number {
   width: 80px;
 }
 .dialog-form-area.flags {
-  width: 225px;
+  width: 280px;
 }
 </style>
