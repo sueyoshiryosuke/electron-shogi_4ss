@@ -30,7 +30,7 @@
       </div>
       <div class="control-items">
         <div>
-          <span class="dialog-form-item-label">{{ t.size }}</span>
+          <span class="form-item-label">{{ t.size }}</span>
           <input
             ref="imageSize"
             class="size"
@@ -39,14 +39,14 @@
             max="2000"
             @input="changeSize"
           />
-          <span class="dialog-form-item-unit">px</span>
+          <span class="form-item-unit">px</span>
         </div>
         <div
           :class="{
             hidden: appSetting.positionImageStyle === PositionImageStyle.GAME,
           }"
         >
-          <span class="dialog-form-item-label">{{ t.title }}</span>
+          <span class="form-item-label">{{ t.title }}</span>
           <input
             ref="headerText"
             class="header"
@@ -61,30 +61,25 @@
           <option :value="PositionImageStyle.GAME">{{ t.gameStyle }}</option>
         </select>
         <button
-          class="dialog-button"
+          class="standard"
           autofocus
           data-hotkey="Enter"
           @click="saveAsPNG"
         >
-          <ButtonIcon class="icon" :icon="Icon.SAVE" />
+          <ButtonIcon :icon="Icon.SAVE" />
           <span>PNG</span>
         </button>
         <button
-          class="dialog-button"
+          class="standard"
           autofocus
           data-hotkey="Enter"
           @click="saveAsJPEG"
         >
-          <ButtonIcon class="icon" :icon="Icon.SAVE" />
+          <ButtonIcon :icon="Icon.SAVE" />
           <span>JPEG</span>
         </button>
-        <button
-          class="dialog-button"
-          autofocus
-          data-hotkey="Escape"
-          @click="close"
-        >
-          <ButtonIcon class="icon" :icon="Icon.CLOSE" />
+        <button class="standard" autofocus data-hotkey="Escape" @click="close">
+          <ButtonIcon :icon="Icon.CLOSE" />
           <span>{{ t.close }}</span>
         </button>
       </div>

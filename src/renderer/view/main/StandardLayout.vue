@@ -22,7 +22,7 @@
             class="unhide-tabview-button"
             @click="onUnhideTabView"
           >
-            <ButtonIcon class="icon" :icon="Icon.ARROW_UP" />
+            <ButtonIcon :icon="Icon.ARROW_UP" />
             <span>{{ t.expandTabView }}</span>
           </button>
         </div>
@@ -344,9 +344,6 @@ export default defineComponent({
   padding: 0 5% 0 5%;
 }
 .tab-pane {
-  height: 100%;
-}
-button .icon {
   height: 100%;
 }
 </style>

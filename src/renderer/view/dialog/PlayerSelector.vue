@@ -34,7 +34,7 @@
         :disabled="!isPlayerSettingEnabled"
         @click="openPlayerSetting"
       >
-        <ButtonIcon class="icon" :icon="Icon.SETTINGS" />
+        <ButtonIcon :icon="Icon.SETTINGS" />
         <span>{{ t.settings }}</span>
       </button>
     </div>

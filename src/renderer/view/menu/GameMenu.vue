@@ -4,17 +4,17 @@
       <div class="groups">
         <div class="group">
           <button class="close" @click="onClose">
-            <ButtonIcon class="icon" :icon="Icon.CLOSE" />
+            <ButtonIcon :icon="Icon.CLOSE" />
             <div class="label">{{ t.back }}</div>
           </button>
         </div>
         <div class="group">
           <button @click="onLocalGame">
-            <ButtonIcon class="icon" :icon="Icon.GAME" />
+            <ButtonIcon :icon="Icon.GAME" />
             <div class="label">{{ t.offlineGame }}</div>
           </button>
           <button @click="onCSAGame">
-            <ButtonIcon class="icon" :icon="Icon.INTERNET" />
+            <ButtonIcon :icon="Icon.INTERNET" />
             <div class="label">{{ t.csaOnlineGame }}</div>
           </button>
         </div>

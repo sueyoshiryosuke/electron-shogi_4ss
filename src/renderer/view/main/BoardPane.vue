@@ -28,7 +28,7 @@
             class="control-item"
             @click="onGame"
           >
-            <ButtonIcon class="icon" :icon="Icon.GAME" />
+            <ButtonIcon :icon="Icon.GAME" />
             <span>{{ t.game }}</span>
           </button>
           <button
@@ -36,7 +36,7 @@
             class="control-item"
             @click="onShowGameResults"
           >
-            <ButtonIcon class="icon" :icon="Icon.SCORE" />
+            <ButtonIcon :icon="Icon.SCORE" />
             <span>{{ t.displayGameResults }}</span>
           </button>
           <button
@@ -45,11 +45,11 @@
             data-hotkey="Escape"
             @click="onStop"
           >
-            <ButtonIcon class="icon" :icon="Icon.STOP" />
+            <ButtonIcon :icon="Icon.STOP" />
             <span>{{ t.stopGame }}</span>
           </button>
           <button v-if="controlStates.win" class="control-item" @click="onWin">
-            <ButtonIcon class="icon" :icon="Icon.CALL" />
+            <ButtonIcon :icon="Icon.CALL" />
             <span>{{ t.declareWinning }}</span>
           </button>
           <button
@@ -57,7 +57,7 @@
             class="control-item"
             @click="onResign"
           >
-            <ButtonIcon class="icon" :icon="Icon.RESIGN" />
+            <ButtonIcon :icon="Icon.RESIGN" />
             <span>{{ t.resign }}</span>
           </button>
           <button
@@ -66,7 +66,7 @@
             data-hotkey="Control+r"
             @click="onResearch"
           >
-            <ButtonIcon class="icon" :icon="Icon.RESEARCH" />
+            <ButtonIcon :icon="Icon.RESEARCH" />
             <span>{{ t.research }}</span>
           </button>
           <button
@@ -75,7 +75,7 @@
             data-hotkey="Escape"
             @click="onEndResearch"
           >
-            <ButtonIcon class="icon" :icon="Icon.END" />
+            <ButtonIcon :icon="Icon.END" />
             <span>{{ t.endResearch }}</span>
           </button>
           <button
@@ -84,7 +84,7 @@
             data-hotkey="Control+a"
             @click="onAnalysis"
           >
-            <ButtonIcon class="icon" :icon="Icon.ANALYSIS" />
+            <ButtonIcon :icon="Icon.ANALYSIS" />
             <span>{{ t.analysis }}</span>
           </button>
           <button
@@ -93,7 +93,7 @@
             data-hotkey="Escape"
             @click="onEndAnalysis"
           >
-            <ButtonIcon class="icon" :icon="Icon.STOP" />
+            <ButtonIcon :icon="Icon.STOP" />
             <span>{{ t.stopAnalysis }}</span>
           </button>
           <button
@@ -101,7 +101,7 @@
             class="control-item"
             @click="onStartEditPosition"
           >
-            <ButtonIcon class="icon" :icon="Icon.EDIT" />
+            <ButtonIcon :icon="Icon.EDIT" />
             <span>{{ t.setupPosition }}</span>
           </button>
           <button
@@ -109,7 +109,7 @@
             class="control-item"
             @click="onEndEditPosition"
           >
-            <ButtonIcon class="icon" :icon="Icon.CHECK" />
+            <ButtonIcon :icon="Icon.CHECK" />
             <span>{{ t.completePositionSetup }}</span>
           </button>
           <button
@@ -117,7 +117,7 @@
             class="control-item"
             @click="onChangeTurn"
           >
-            <ButtonIcon class="icon" :icon="Icon.SWAP" />
+            <ButtonIcon :icon="Icon.SWAP" />
             <span>{{ t.changeTurn }}</span>
           </button>
           <button
@@ -136,7 +136,7 @@
             data-hotkey="Control+,"
             @click="onOpenAppSettings"
           >
-            <ButtonIcon class="icon" :icon="Icon.SETTINGS" />
+            <ButtonIcon :icon="Icon.SETTINGS" />
             <span>{{ t.appSettings }}</span>
           </button>
           <button
@@ -145,15 +145,15 @@
             :disabled="!controlStates.engineSettings"
             @click="onOpenEngineSettings"
           >
-            <ButtonIcon class="icon" :icon="Icon.ENGINE_SETTINGS" />
+            <ButtonIcon :icon="Icon.ENGINE_SETTINGS" />
             <span>{{ t.engineSettings }}</span>
           </button>
           <button class="control-item" data-hotkey="Control+t" @click="onFlip">
-            <ButtonIcon class="icon" :icon="Icon.FLIP" />
+            <ButtonIcon :icon="Icon.FLIP" />
             <span>{{ t.flipBoard }}</span>
           </button>
           <button class="control-item" @click="onFileAction">
-            <ButtonIcon class="icon" :icon="Icon.FILE" />
+            <ButtonIcon :icon="Icon.FILE" />
             <span>{{ t.file }}</span>
           </button>
           <button
@@ -162,7 +162,7 @@
             :disabled="!controlStates.removeCurrentMove"
             @click="onRemoveCurrentMove"
           >
-            <ButtonIcon class="icon" :icon="Icon.DELETE" />
+            <ButtonIcon :icon="Icon.DELETE" />
             <span>{{ t.deleteMove }}</span>
           </button>
         </div>

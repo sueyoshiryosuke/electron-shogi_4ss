@@ -2,7 +2,7 @@
   <div>
     <dialog ref="dialog" class="bussy">
       <div class="message-box">
-        <ButtonIcon class="icon" :icon="Icon.BUSSY" />
+        <ButtonIcon :icon="Icon.BUSSY" />
         <div class="message">
           <span v-if="store.csaGameState === CSAGameState.READY">
             対局の開始を待っています。
@@ -20,7 +20,7 @@
           store.csaGameState === CSAGameState.READY ||
           store.csaGameState === CSAGameState.LOGIN_RETRY_INTERVAL
         "
-        class="dialog-main-buttons"
+        class="main-buttons"
       >
         <button autofocus data-hotkey="Escape" @click="onLogout()">
           対局をキャンセル

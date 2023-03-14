@@ -1,8 +1,8 @@
 <template>
   <div>
     <dialog ref="dialog">
-      <div class="dialog-title">{{ t.engineManagement }}</div>
-      <div class="dialog-form-area">
+      <div class="title">{{ t.engineManagement }}</div>
+      <div class="form-area">
         <div class="engine-filter">
           <input
             ref="filter"
@@ -29,17 +29,17 @@
           </div>
         </div>
       </div>
-      <button class="dialog-wide-button" @click="add()">{{ t.add }}</button>
-      <div class="dialog-main-buttons">
+      <button class="wide" @click="add()">{{ t.add }}</button>
+      <div class="main-buttons">
         <button
           data-hotkey="Enter"
           autofocus
-          class="dialog-button"
+          class="standard"
           @click="saveAndClose()"
         >
           {{ t.saveAndClose }}
         </button>
-        <button class="dialog-button" data-hotkey="Escape" @click="cancel()">
+        <button class="standard" data-hotkey="Escape" @click="cancel()">
           {{ t.cancel }}
         </button>
       </div>

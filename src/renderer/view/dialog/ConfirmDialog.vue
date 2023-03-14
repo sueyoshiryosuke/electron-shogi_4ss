@@ -2,19 +2,14 @@
   <div>
     <dialog ref="dialog" class="confirm">
       <div class="message-box">
-        <ButtonIcon class="icon" :icon="Icon.QUESTION" />
+        <ButtonIcon :icon="Icon.QUESTION" />
         <div class="message">{{ store.confirmation }}</div>
       </div>
-      <div class="dialog-main-buttons">
-        <button
-          data-hotkey="Enter"
-          autofocus
-          class="dialog-button"
-          @click="onOk()"
-        >
+      <div class="main-buttons">
+        <button data-hotkey="Enter" autofocus class="standard" @click="onOk()">
           OK
         </button>
-        <button class="dialog-button" data-hotkey="Escape" @click="onClose()">
+        <button class="standard" data-hotkey="Escape" @click="onClose()">
           {{ t.cancel }}
         </button>
       </div>

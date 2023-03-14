@@ -32,104 +32,94 @@ dialog select {
   margin-right: auto;
 }
 
-.dialog-title {
+dialog .title {
   text-align: center;
   margin-bottom: 5px;
   font-weight: bold;
   font-size: 1.2em;
 }
 
-.dialog-scroll-area {
+dialog .form-area {
   border: 1px dashed var(--dialog-border-color);
   border-radius: 10px 10px 10px 10px;
-  margin-bottom: 10px;
-  padding: 10px;
-  overflow: auto;
-  display: flex;
-  flex-direction: column;
-}
-
-.dialog-form-area-row {
-  display: flex;
-  flex-direction: row;
-}
-
-.dialog-form-area-row > :nth-of-type(n+2) {
-  margin-left: 10px;
-}
-
-.dialog-form-area {
-  border: 1px dashed var(--dialog-border-color);
-  border-radius: 10px 10px 10px 10px;
-  margin-bottom: 10px;
   padding: 10px;
 }
 
-.dialog-form-item {
-  display: flex;
-  flex-direction: row;
+dialog .form-area:nth-of-type(n+2) {
+  margin-top: 10px;
 }
 
-.dialog-form-item:nth-of-type(n+2) {
+dialog .form-area-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+dialog .form-area-row:nth-of-type(n+2) {
+  margin-top: 10px;
+}
+
+dialog .form-area-row > .form-area {
+  margin-top: 0px;
+}
+
+dialog .form-item {
+  text-align: left;
+}
+
+dialog .form-item.center {
+  text-align: center;
+}
+
+dialog .form-item > * {
+  vertical-align: middle;
+}
+
+dialog .form-item:nth-of-type(n+2) {
   margin-top: 5px;
 }
 
-.dialog-form-item label {
+dialog .form-item label {
   font-size: 0.8em;
 }
 
-.dialog-form-item-label {
+dialog .form-item-label {
+  display: inline-block;
   text-align: left;
   margin-right: 5px;
   width: 90px;
 }
 
-.dialog-form-item-label-wide {
+dialog .form-item-label-wide {
+  display: inline-block;
   text-align: left;
   margin-right: 5px;
   width: 160px;
 }
 
-.dialog-form-item-unit {
+dialog .form-item-unit {
+  display: inline-block;
   text-align: left;
   font-size: 0.8em;
   margin: 0px 5px 0px 5px;
   padding-top: 0.2em;
-  align-items: center;
 }
 
-.dialog-form-note {
+dialog .note {
   text-align: left;
   font-size: 0.8em;
+}
+
+dialog .note:nth-of-type(n+2) {
   margin-top: 5px;
 }
 
-.dialog-form-warning {
-  background-color: var(--text-bg-color-warning);
-}
-
-.dialog-main-buttons {
+dialog .main-buttons {
   display: flex;
   flex-direction: row;
   margin-top: 5px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.dialog-button {
-  margin: 0px 5px 0px 5px;
-  padding: 5px 25px 5px 25px;
-}
-
-.dialog-thin-button {
-  margin: 0px 5px 0px 5px;
-  padding: 2px 25px 2px 25px;
-}
-
-.dialog-wide-button {
-  width: 100%;
-  margin: 5px 0px 5px 0px;
-  padding: 5px 0px 5px 0px;
 }
 
 dialog .icon {

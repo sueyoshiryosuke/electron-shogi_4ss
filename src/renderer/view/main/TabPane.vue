@@ -9,11 +9,11 @@
           :class="{ selected: activeTab === tab }"
           @click="changeSelect(tab)"
         >
-          <ButtonIcon class="icon" :icon="tabs[tab].icon" />
+          <ButtonIcon :icon="tabs[tab].icon" />
           <span>{{ tabs[tab].title }}</span>
         </div>
         <div v-if="displayMinimizeToggle" class="tab end" @click="minimize">
-          <ButtonIcon class="icon" :icon="Icon.ARROW_DROP" />
+          <ButtonIcon :icon="Icon.ARROW_DROP" />
           <span>{{ t.hideTabView }}</span>
         </div>
       </div>
@@ -181,9 +181,6 @@ export default defineComponent({
 }
 .tab.end {
   margin-left: auto;
-}
-.tab .icon {
-  height: 100%;
 }
 .tab-contents {
   flex: 1;

@@ -1,8 +1,8 @@
 <template>
   <div>
     <dialog ref="dialog">
-      <div class="dialog-title">{{ t.engineSettings }}</div>
-      <div class="dialog-form-area">
+      <div class="title">{{ t.engineSettings }}</div>
+      <div class="form-area">
         <div class="option-filter">
           <input
             ref="filter"
@@ -27,7 +27,7 @@
             <div class="option-name">{{ t.enginePath }}</div>
             <div class="option-unchangeable">
               <div>{{ engine.path }}</div>
-              <button class="dialog-thin-button" @click="openEngineDir">
+              <button class="thin" @click="openEngineDir">
                 {{ t.openDirectory }}
               </button>
             </div>
@@ -81,7 +81,7 @@
             />
             <button
               v-if="option.type === 'filename'"
-              class="dialog-thin-button"
+              class="thin"
               @click="selectFile(inputElementID(option))"
             >
               {{ t.select }}
@@ -107,7 +107,7 @@
             </select>
             <button
               v-if="option.type === 'button'"
-              class="dialog-thin-button"
+              class="thin"
               @click="sendOption(option.name)"
             >
               {{ t.invoke }}
@@ -115,19 +115,14 @@
           </div>
         </div>
       </div>
-      <button class="dialog-wide-button" @click="reset()">
+      <button class="wide" @click="reset()">
         {{ t.resetToEngineDefaultValues }}
       </button>
-      <div class="dialog-main-buttons">
-        <button
-          data-hotkey="Enter"
-          autofocus
-          class="dialog-button"
-          @click="ok()"
-        >
+      <div class="main-buttons">
+        <button data-hotkey="Enter" autofocus class="standard" @click="ok()">
           {{ okButtonText }}
         </button>
-        <button class="dialog-button" data-hotkey="Escape" @click="cancel()">
+        <button class="standard" data-hotkey="Escape" @click="cancel()">
           {{ t.cancel }}
         </button>
       </div>

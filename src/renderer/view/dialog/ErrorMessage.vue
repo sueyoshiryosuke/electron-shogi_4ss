@@ -2,7 +2,7 @@
   <div>
     <dialog ref="dialog" class="error">
       <div class="message-box">
-        <ButtonIcon class="icon" :icon="Icon.ERROR" />
+        <ButtonIcon :icon="Icon.ERROR" />
         <div class="items">
           <div class="notice">
             {{ t.errorsOccurred(store.errors.length) }}
@@ -16,7 +16,7 @@
           </div>
         </div>
       </div>
-      <div class="dialog-main-buttons">
+      <div class="main-buttons">
         <button autofocus data-hotkey="Escape" @click="onClose()">
           {{ t.close }}
         </button>

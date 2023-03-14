@@ -2,7 +2,7 @@
   <div>
     <dialog ref="dialog" class="bussy">
       <div class="message-box">
-        <ButtonIcon class="icon" :icon="Icon.BUSSY" />
+        <ButtonIcon :icon="Icon.BUSSY" />
         <div class="message">{{ t.processingPleaseWait }}</div>
       </div>
     </dialog>

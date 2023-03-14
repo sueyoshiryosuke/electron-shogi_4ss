@@ -19,7 +19,7 @@
                 data-hotkey="Control+t"
                 @click="doFlip"
               >
-                <ButtonIcon class="icon" :icon="Icon.FLIP" />
+                <ButtonIcon :icon="Icon.FLIP" />
               </button>
               <button
                 class="control-item"
@@ -27,7 +27,7 @@
                 data-hotkey="Escape"
                 @click="close"
               >
-                <ButtonIcon class="icon" :icon="Icon.CLOSE" />
+                <ButtonIcon :icon="Icon.CLOSE" />
               </button>
             </div>
             <div class="control-row">
@@ -36,14 +36,14 @@
                 data-hotkey="ArrowLeft"
                 @click="goBegin"
               >
-                <ButtonIcon class="icon" :icon="Icon.FIRST" />
+                <ButtonIcon :icon="Icon.FIRST" />
               </button>
               <button
                 class="control-item"
                 data-hotkey="ArrowRight"
                 @click="goEnd"
               >
-                <ButtonIcon class="icon" :icon="Icon.LAST" />
+                <ButtonIcon :icon="Icon.LAST" />
               </button>
             </div>
             <div class="control-row">
@@ -52,14 +52,14 @@
                 data-hotkey="ArrowUp"
                 @click="goBack"
               >
-                <ButtonIcon class="icon" :icon="Icon.BACK" />
+                <ButtonIcon :icon="Icon.BACK" />
               </button>
               <button
                 class="control-item"
                 data-hotkey="ArrowDown"
                 @click="goForward"
               >
-                <ButtonIcon class="icon" :icon="Icon.NEXT" />
+                <ButtonIcon :icon="Icon.NEXT" />
               </button>
             </div>
           </div>

@@ -4,51 +4,51 @@
       <div class="groups">
         <div class="group">
           <button class="close" @click="onClose">
-            <ButtonIcon class="icon" :icon="Icon.CLOSE" />
+            <ButtonIcon :icon="Icon.CLOSE" />
             <div class="label">{{ t.back }}</div>
           </button>
         </div>
         <div class="group">
           <button :disabled="!states.newFile" @click="onNewFile">
-            <ButtonIcon class="icon" :icon="Icon.FILE" />
+            <ButtonIcon :icon="Icon.FILE" />
             <div class="label">{{ t.clear }}</div>
           </button>
           <button :disabled="!states.open" @click="onOpen">
-            <ButtonIcon class="icon" :icon="Icon.OPEN" />
+            <ButtonIcon :icon="Icon.OPEN" />
             <div class="label">{{ t.open }}</div>
           </button>
           <button :disabled="!states.save" @click="onSave">
-            <ButtonIcon class="icon" :icon="Icon.SAVE" />
+            <ButtonIcon :icon="Icon.SAVE" />
             <div class="label">{{ t.saveOverwrite }}</div>
           </button>
           <button :disabled="!states.saveAs" @click="onSaveAs">
-            <ButtonIcon class="icon" :icon="Icon.SAVE_AS" />
+            <ButtonIcon :icon="Icon.SAVE_AS" />
             <div class="label">{{ t.saveAs }}</div>
           </button>
           <button :disabled="!states.exportImage" @click="onExportImage">
-            <ButtonIcon class="icon" :icon="Icon.GRID" />
+            <ButtonIcon :icon="Icon.GRID" />
             <div class="label">{{ t.positionImage }}</div>
           </button>
         </div>
         <div class="group">
           <button @click="onCopyKIF">
-            <ButtonIcon class="icon" :icon="Icon.COPY" />
+            <ButtonIcon :icon="Icon.COPY" />
             <div class="label">{{ t.copyAsKIF }}</div>
           </button>
           <button @click="onCopyCSA">
-            <ButtonIcon class="icon" :icon="Icon.COPY" />
+            <ButtonIcon :icon="Icon.COPY" />
             <div class="label">{{ t.copyAsCSA }}</div>
           </button>
           <button @click="onCopyUSI">
-            <ButtonIcon class="icon" :icon="Icon.COPY" />
+            <ButtonIcon :icon="Icon.COPY" />
             <div class="label">{{ t.copyAsUSI }}</div>
           </button>
           <button @click="onCopySFEN">
-            <ButtonIcon class="icon" :icon="Icon.COPY" />
+            <ButtonIcon :icon="Icon.COPY" />
             <div class="label">{{ t.copyAsSFEN }}</div>
           </button>
           <button :disabled="!states.paste" @click="onPaste">
-            <ButtonIcon class="icon" :icon="Icon.PASTE" />
+            <ButtonIcon :icon="Icon.PASTE" />
             <div class="label">{{ t.paste }}</div>
           </button>
         </div>

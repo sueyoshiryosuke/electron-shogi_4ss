@@ -1,0 +1,17 @@
+.icon {
+  height: 100%;
+  vertical-align: top;
+}
+
+.icon + span {
+  margin-left: 5px;
+  line-height: 100%;
+}
+
+.warning {
+  background-color: var(--text-bg-color-warning);
+}
+
+.scroll {
+  overflow: auto;
+}

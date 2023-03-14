@@ -2,7 +2,7 @@
   <div>
     <dialog ref="dialog" class="info">
       <div class="message-box">
-        <ButtonIcon class="icon" :icon="Icon.INFO" />
+        <ButtonIcon :icon="Icon.INFO" />
         <div class="message">{{ store.message.text }}</div>
       </div>
       <div
@@ -29,7 +29,7 @@
           </li>
         </ul>
       </div>
-      <div class="dialog-main-buttons">
+      <div class="main-buttons">
         <button autofocus data-hotkey="Escape" @click="onClose()">
           {{ t.close }}
         </button>

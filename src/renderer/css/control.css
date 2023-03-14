@@ -26,6 +26,22 @@ button.close:hover:enabled {
   background: linear-gradient(to top, var(--hovered-close-button-bg-color) 80%, white 140%);
 }
 
+button.standard {
+  margin: 0px 5px 0px 5px;
+  padding: 5px 25px 5px 25px;
+}
+
+button.thin {
+  margin: 0px 5px 0px 5px;
+  padding: 2px 25px 2px 25px;
+}
+
+button.wide {
+  width: 100%;
+  margin: 5px 0px 5px 0px;
+  padding: 5px 0px 5px 0px;
+}
+
 input {
   color: var(--text-color);
   background-color: var(--text-bg-color);
@@ -45,14 +61,4 @@ textarea {
   color: var(--text-color);
   background-color: var(--text-bg-color);
   font-size: 0.9em;
-}
-
-.icon {
-  height: 100%;
-  vertical-align: top;
-}
-
-.icon + span {
-  margin-left: 5px;
-  line-height: 100%;
 }

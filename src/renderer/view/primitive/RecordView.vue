@@ -7,7 +7,7 @@
         data-hotkey="ArrowLeft"
         @click="goBegin()"
       >
-        <ButtonIcon class="icon" :icon="Icon.FIRST" />
+        <ButtonIcon :icon="Icon.FIRST" />
       </button>
       <button
         class="control-button"
@@ -15,7 +15,7 @@
         data-hotkey="ArrowUp"
         @click="goBack()"
       >
-        <ButtonIcon class="icon" :icon="Icon.BACK" />
+        <ButtonIcon :icon="Icon.BACK" />
       </button>
       <button
         class="control-button"
@@ -23,7 +23,7 @@
         data-hotkey="ArrowDown"
         @click="goForward()"
       >
-        <ButtonIcon class="icon" :icon="Icon.NEXT" />
+        <ButtonIcon :icon="Icon.NEXT" />
       </button>
       <button
         class="control-button"
@@ -31,7 +31,7 @@
         data-hotkey="ArrowRight"
         @click="goEnd()"
       >
-        <ButtonIcon class="icon" :icon="Icon.LAST" />
+        <ButtonIcon :icon="Icon.LAST" />
       </button>
     </div>
     <div ref="moveList" class="move-list">
@@ -73,14 +73,14 @@
           :disabled="!operational"
           @click="swapWithPreviousBranch()"
         >
-          <ButtonIcon class="icon" :icon="Icon.ARROW_UP" />
+          <ButtonIcon :icon="Icon.ARROW_UP" />
         </button>
         <button
           class="branch-list-control-button"
           :disabled="!operational"
           @click="swapWithNextBranch()"
         >
-          <ButtonIcon class="icon" :icon="Icon.ARROW_DROP" />
+          <ButtonIcon :icon="Icon.ARROW_DROP" />
         </button>
       </div>
     </div>

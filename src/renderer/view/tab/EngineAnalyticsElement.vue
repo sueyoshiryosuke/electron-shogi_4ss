@@ -88,7 +88,7 @@
               v-if="iterate.pv && iterate.pv.length !== 0 && iterate.text"
               @click="showPreview(iterate)"
             >
-              <ButtonIcon class="icon" :icon="Icon.PLAY" />
+              <ButtonIcon :icon="Icon.PLAY" />
               <span>{{ t.displayPVShort }}</span>
             </button>
             {{ iterate.text }}
