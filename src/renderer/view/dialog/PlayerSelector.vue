@@ -34,7 +34,7 @@
         :disabled="!isPlayerSettingEnabled"
         @click="openPlayerSetting"
       >
-        <ButtonIcon :icon="Icon.SETTINGS" />
+        <Icon :icon="IconType.SETTINGS" />
         <span>{{ t.settings }}</span>
       </button>
     </div>
@@ -52,9 +52,9 @@
 import { t } from "@/common/i18n";
 import { computed, defineComponent, PropType, Ref, ref } from "vue";
 import * as uri from "@/common/uri.js";
-import ButtonIcon from "@/renderer/view/primitive/ButtonIcon.vue";
+import Icon from "@/renderer/view/primitive/Icon.vue";
 import USIEngineOptionDialog from "@/renderer/view/dialog/USIEngineOptionDialog.vue";
-import { Icon } from "@/renderer/assets/icons";
+import { IconType } from "@/renderer/assets/icons";
 import {
   getUSIEngineOptionCurrentValue,
   USIEngineSetting,
@@ -71,7 +71,7 @@ import api from "@/renderer/ipc/api";
 export default defineComponent({
   name: "PlayerSelector",
   components: {
-    ButtonIcon,
+    Icon,
     USIEngineOptionDialog,
   },
   props: {
@@ -195,7 +195,7 @@ export default defineComponent({
       openPlayerSetting,
       savePlayerSetting,
       closePlayerSetting,
-      Icon,
+      IconType,
       uri,
     };
   },

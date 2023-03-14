@@ -22,7 +22,7 @@
             class="unhide-tabview-button"
             @click="onUnhideTabView"
           >
-            <ButtonIcon :icon="Icon.ARROW_UP" />
+            <Icon :icon="IconType.ARROW_UP" />
             <span>{{ t.expandTabView }}</span>
           </button>
         </div>
@@ -100,8 +100,8 @@ import { toString } from "@/common/helpers/string";
 import { Lazy } from "@/renderer/helpers/lazy";
 import { Splitpanes, Pane } from "splitpanes";
 import "splitpanes/dist/splitpanes.css";
-import { Icon } from "@/renderer/assets/icons";
-import ButtonIcon from "@/renderer/view/primitive/ButtonIcon.vue";
+import { IconType } from "@/renderer/assets/icons";
+import Icon from "@/renderer/view/primitive/Icon.vue";
 import { useAppSetting } from "@/renderer/store/setting";
 
 const splitterWidth = 8;
@@ -116,7 +116,7 @@ export default defineComponent({
     TabPane,
     Splitpanes,
     Pane,
-    ButtonIcon,
+    Icon,
   },
   setup() {
     const appSetting = useAppSetting();
@@ -293,7 +293,7 @@ export default defineComponent({
       onResizedBottom,
       TabPaneType,
       Tab,
-      Icon,
+      IconType,
     };
   },
 });

@@ -66,7 +66,7 @@
           data-hotkey="Enter"
           @click="saveAsPNG"
         >
-          <ButtonIcon :icon="Icon.SAVE" />
+          <Icon :icon="IconType.SAVE" />
           <span>PNG</span>
         </button>
         <button
@@ -75,11 +75,11 @@
           data-hotkey="Enter"
           @click="saveAsJPEG"
         >
-          <ButtonIcon :icon="Icon.SAVE" />
+          <Icon :icon="IconType.SAVE" />
           <span>JPEG</span>
         </button>
         <button class="standard" autofocus data-hotkey="Escape" @click="close">
-          <ButtonIcon :icon="Icon.CLOSE" />
+          <Icon :icon="IconType.CLOSE" />
           <span>{{ t.close }}</span>
         </button>
       </div>
@@ -100,7 +100,7 @@ import {
 import { t } from "@/common/i18n";
 import BoardView from "@/renderer/view/primitive/BoardView.vue";
 import SimpleBoardView from "@/renderer/view/primitive/SimpleBoardView.vue";
-import ButtonIcon from "@/renderer/view/primitive/ButtonIcon.vue";
+import Icon from "@/renderer/view/primitive/Icon.vue";
 import { showModalDialog } from "@/renderer/helpers/dialog";
 import {
   installHotKeyForDialog,
@@ -115,7 +115,7 @@ import {
   getMoveDisplayText,
 } from "@/common/shogi";
 import { useStore } from "@/renderer/store";
-import { Icon } from "@/renderer/assets/icons";
+import { IconType } from "@/renderer/assets/icons";
 import api from "@/renderer/ipc/api";
 import { Lazy } from "@/renderer/helpers/lazy";
 import { PositionImageStyle } from "@/common/settings/app";
@@ -130,7 +130,7 @@ export default defineComponent({
   components: {
     BoardView,
     SimpleBoardView,
-    ButtonIcon,
+    Icon,
   },
   setup() {
     const store = useStore();
@@ -244,7 +244,7 @@ export default defineComponent({
     return {
       PositionImageStyle,
       t,
-      Icon,
+      IconType,
       dialog,
       board,
       imageSize,

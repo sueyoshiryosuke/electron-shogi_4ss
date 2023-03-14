@@ -2,7 +2,7 @@
   <div>
     <dialog ref="dialog" class="error">
       <div class="message-box">
-        <ButtonIcon :icon="Icon.ERROR" />
+        <Icon :icon="IconType.ERROR" />
         <div class="items">
           <div class="notice">
             {{ t.errorsOccurred(store.errors.length) }}
@@ -30,8 +30,8 @@ import { t } from "@/common/i18n";
 import { useStore } from "@/renderer/store";
 import { defineComponent, onBeforeUnmount, onMounted, ref, Ref } from "vue";
 import { showModalDialog } from "@/renderer/helpers/dialog.js";
-import ButtonIcon from "@/renderer/view/primitive/ButtonIcon.vue";
-import { Icon } from "@/renderer/assets/icons";
+import Icon from "@/renderer/view/primitive/Icon.vue";
+import { IconType } from "@/renderer/assets/icons";
 import {
   installHotKeyForDialog,
   uninstallHotKeyForDialog,
@@ -40,7 +40,7 @@ import {
 export default defineComponent({
   name: "ErrorMessage",
   components: {
-    ButtonIcon,
+    Icon,
   },
   setup() {
     const store = useStore();
@@ -64,7 +64,7 @@ export default defineComponent({
       dialog,
       store,
       onClose,
-      Icon,
+      IconType,
     };
   },
 });

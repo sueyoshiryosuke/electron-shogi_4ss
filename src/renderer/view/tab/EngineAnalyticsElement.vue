@@ -88,7 +88,7 @@
               v-if="iterate.pv && iterate.pv.length !== 0 && iterate.text"
               @click="showPreview(iterate)"
             >
-              <ButtonIcon :icon="Icon.PLAY" />
+              <Icon :icon="IconType.PLAY" />
               <span>{{ t.displayPVShort }}</span>
             </button>
             {{ iterate.text }}
@@ -110,8 +110,8 @@
 import { t } from "@/common/i18n";
 import { USIIteration, USIPlayerMonitor } from "@/renderer/store/usi";
 import { computed, defineComponent, ref } from "vue";
-import { Icon } from "@/renderer/assets/icons";
-import ButtonIcon from "@/renderer/view/primitive/ButtonIcon.vue";
+import { IconType } from "@/renderer/assets/icons";
+import Icon from "@/renderer/view/primitive/Icon.vue";
 import PVPreviewDialog from "@/renderer/view/dialog/PVPreviewDialog.vue";
 import { EvaluationViewFrom } from "@/common/settings/app";
 import { Color } from "@/common/shogi";
@@ -126,7 +126,7 @@ type Preview = {
 export default defineComponent({
   name: "EngineAnalyticsElement",
   components: {
-    ButtonIcon,
+    Icon,
     PVPreviewDialog,
   },
   props: {
@@ -224,7 +224,7 @@ export default defineComponent({
 
     return {
       t,
-      Icon,
+      IconType,
       enableHighlight,
       preview,
       evaluationViewFrom,

@@ -208,7 +208,7 @@ import {
 } from "@/common/settings/csa";
 import { showModalDialog } from "@/renderer/helpers/dialog.js";
 import * as uri from "@/common/uri.js";
-import { Icon } from "@/renderer/assets/icons";
+import { IconType } from "@/renderer/assets/icons";
 import PlayerSelector from "@/renderer/view/dialog/PlayerSelector.vue";
 import { PlayerSetting } from "@/common/settings/player";
 import { readInputAsNumber } from "@/renderer/helpers/form.js";
@@ -404,7 +404,7 @@ export default defineComponent({
       onSelectPlayer,
       onTogglePasswordVisibility,
       onChangeHistory,
-      Icon,
+      IconType,
     };
   },
 });

@@ -7,7 +7,7 @@
         data-hotkey="ArrowLeft"
         @click="goBegin()"
       >
-        <ButtonIcon :icon="Icon.FIRST" />
+        <Icon :icon="IconType.FIRST" />
       </button>
       <button
         class="control-button"
@@ -15,7 +15,7 @@
         data-hotkey="ArrowUp"
         @click="goBack()"
       >
-        <ButtonIcon :icon="Icon.BACK" />
+        <Icon :icon="IconType.BACK" />
       </button>
       <button
         class="control-button"
@@ -23,7 +23,7 @@
         data-hotkey="ArrowDown"
         @click="goForward()"
       >
-        <ButtonIcon :icon="Icon.NEXT" />
+        <Icon :icon="IconType.NEXT" />
       </button>
       <button
         class="control-button"
@@ -31,7 +31,7 @@
         data-hotkey="ArrowRight"
         @click="goEnd()"
       >
-        <ButtonIcon :icon="Icon.LAST" />
+        <Icon :icon="IconType.LAST" />
       </button>
     </div>
     <div ref="moveList" class="move-list">
@@ -73,14 +73,14 @@
           :disabled="!operational"
           @click="swapWithPreviousBranch()"
         >
-          <ButtonIcon :icon="Icon.ARROW_UP" />
+          <Icon :icon="IconType.ARROW_UP" />
         </button>
         <button
           class="branch-list-control-button"
           :disabled="!operational"
           @click="swapWithNextBranch()"
         >
-          <ButtonIcon :icon="Icon.ARROW_DROP" />
+          <Icon :icon="IconType.ARROW_DROP" />
         </button>
       </div>
     </div>
@@ -90,13 +90,13 @@
 <script lang="ts">
 import { ImmutableRecord, ImmutableNode } from "@/common/shogi";
 import { computed, ref, defineComponent, Ref, PropType, onUpdated } from "vue";
-import ButtonIcon from "@/renderer/view/primitive/ButtonIcon.vue";
-import { Icon } from "@/renderer/assets/icons";
+import Icon from "@/renderer/view/primitive/Icon.vue";
+import { IconType } from "@/renderer/assets/icons";
 
 export default defineComponent({
   name: "RecordView",
   components: {
-    ButtonIcon,
+    Icon,
   },
   props: {
     record: {
@@ -256,7 +256,7 @@ export default defineComponent({
       changeBranch,
       swapWithPreviousBranch,
       swapWithNextBranch,
-      Icon,
+      IconType,
     };
   },
 });

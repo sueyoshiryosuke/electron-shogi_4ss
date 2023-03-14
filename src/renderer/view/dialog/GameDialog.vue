@@ -34,7 +34,7 @@
         </div>
         <div class="players-control">
           <button @click="onSwapColor">
-            <ButtonIcon :icon="Icon.SWAP_H" />
+            <Icon :icon="IconType.SWAP_H" />
             <span>{{ t.swapSenteGote }}</span>
           </button>
         </div>
@@ -195,8 +195,8 @@ import {
 import { showModalDialog } from "@/renderer/helpers/dialog.js";
 import * as uri from "@/common/uri.js";
 import { readInputAsNumber } from "@/renderer/helpers/form.js";
-import { Icon } from "@/renderer/assets/icons";
-import ButtonIcon from "@/renderer/view/primitive/ButtonIcon.vue";
+import { IconType } from "@/renderer/assets/icons";
+import Icon from "@/renderer/view/primitive/Icon.vue";
 import PlayerSelector from "@/renderer/view/dialog/PlayerSelector.vue";
 import { PlayerSetting } from "@/common/settings/player";
 import {
@@ -207,7 +207,7 @@ import {
 export default defineComponent({
   name: "GameDialog",
   components: {
-    ButtonIcon,
+    Icon,
     PlayerSelector,
   },
   setup() {
@@ -381,7 +381,7 @@ export default defineComponent({
       onSelectBlackPlayer,
       onSelectWhitePlayer,
       onSwapColor,
-      Icon,
+      IconType,
     };
   },
 });

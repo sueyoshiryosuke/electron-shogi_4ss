@@ -19,7 +19,7 @@
                 data-hotkey="Control+t"
                 @click="doFlip"
               >
-                <ButtonIcon :icon="Icon.FLIP" />
+                <Icon :icon="IconType.FLIP" />
               </button>
               <button
                 class="control-item"
@@ -27,7 +27,7 @@
                 data-hotkey="Escape"
                 @click="close"
               >
-                <ButtonIcon :icon="Icon.CLOSE" />
+                <Icon :icon="IconType.CLOSE" />
               </button>
             </div>
             <div class="control-row">
@@ -36,14 +36,14 @@
                 data-hotkey="ArrowLeft"
                 @click="goBegin"
               >
-                <ButtonIcon :icon="Icon.FIRST" />
+                <Icon :icon="IconType.FIRST" />
               </button>
               <button
                 class="control-item"
                 data-hotkey="ArrowRight"
                 @click="goEnd"
               >
-                <ButtonIcon :icon="Icon.LAST" />
+                <Icon :icon="IconType.LAST" />
               </button>
             </div>
             <div class="control-row">
@@ -52,14 +52,14 @@
                 data-hotkey="ArrowUp"
                 @click="goBack"
               >
-                <ButtonIcon :icon="Icon.BACK" />
+                <Icon :icon="IconType.BACK" />
               </button>
               <button
                 class="control-item"
                 data-hotkey="ArrowDown"
                 @click="goForward"
               >
-                <ButtonIcon :icon="Icon.NEXT" />
+                <Icon :icon="IconType.NEXT" />
               </button>
             </div>
           </div>
@@ -94,11 +94,11 @@ import {
   onBeforeUnmount,
 } from "vue";
 import BoardView from "@/renderer/view/primitive/BoardView.vue";
-import ButtonIcon from "@/renderer/view/primitive/ButtonIcon.vue";
+import Icon from "@/renderer/view/primitive/Icon.vue";
 import { RectSize } from "@/common/graphics.js";
 import { computed } from "vue";
 import { showModalDialog } from "@/renderer/helpers/dialog.js";
-import { Icon } from "@/renderer/assets/icons";
+import { IconType } from "@/renderer/assets/icons";
 import {
   installHotKeyForDialog,
   uninstallHotKeyForDialog,
@@ -107,7 +107,7 @@ import { useAppSetting } from "@/renderer/store/setting";
 
 export default defineComponent({
   name: "PVPreviewDialog",
-  components: { BoardView, ButtonIcon },
+  components: { BoardView, Icon },
   props: {
     position: {
       type: String,
@@ -221,7 +221,7 @@ export default defineComponent({
       goBack,
       goForward,
       doFlip,
-      Icon,
+      IconType,
     };
   },
 });

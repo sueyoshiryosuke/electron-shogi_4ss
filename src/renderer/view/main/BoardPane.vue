@@ -28,7 +28,7 @@
             class="control-item"
             @click="onGame"
           >
-            <ButtonIcon :icon="Icon.GAME" />
+            <Icon :icon="IconType.GAME" />
             <span>{{ t.game }}</span>
           </button>
           <button
@@ -36,7 +36,7 @@
             class="control-item"
             @click="onShowGameResults"
           >
-            <ButtonIcon :icon="Icon.SCORE" />
+            <Icon :icon="IconType.SCORE" />
             <span>{{ t.displayGameResults }}</span>
           </button>
           <button
@@ -45,11 +45,11 @@
             data-hotkey="Escape"
             @click="onStop"
           >
-            <ButtonIcon :icon="Icon.STOP" />
+            <Icon :icon="IconType.STOP" />
             <span>{{ t.stopGame }}</span>
           </button>
           <button v-if="controlStates.win" class="control-item" @click="onWin">
-            <ButtonIcon :icon="Icon.CALL" />
+            <Icon :icon="IconType.CALL" />
             <span>{{ t.declareWinning }}</span>
           </button>
           <button
@@ -57,7 +57,7 @@
             class="control-item"
             @click="onResign"
           >
-            <ButtonIcon :icon="Icon.RESIGN" />
+            <Icon :icon="IconType.RESIGN" />
             <span>{{ t.resign }}</span>
           </button>
           <button
@@ -66,7 +66,7 @@
             data-hotkey="Control+r"
             @click="onResearch"
           >
-            <ButtonIcon :icon="Icon.RESEARCH" />
+            <Icon :icon="IconType.RESEARCH" />
             <span>{{ t.research }}</span>
           </button>
           <button
@@ -75,7 +75,7 @@
             data-hotkey="Escape"
             @click="onEndResearch"
           >
-            <ButtonIcon :icon="Icon.END" />
+            <Icon :icon="IconType.END" />
             <span>{{ t.endResearch }}</span>
           </button>
           <button
@@ -84,7 +84,7 @@
             data-hotkey="Control+a"
             @click="onAnalysis"
           >
-            <ButtonIcon :icon="Icon.ANALYSIS" />
+            <Icon :icon="IconType.ANALYSIS" />
             <span>{{ t.analysis }}</span>
           </button>
           <button
@@ -93,7 +93,7 @@
             data-hotkey="Escape"
             @click="onEndAnalysis"
           >
-            <ButtonIcon :icon="Icon.STOP" />
+            <Icon :icon="IconType.STOP" />
             <span>{{ t.stopAnalysis }}</span>
           </button>
           <button
@@ -101,7 +101,7 @@
             class="control-item"
             @click="onStartEditPosition"
           >
-            <ButtonIcon :icon="Icon.EDIT" />
+            <Icon :icon="IconType.EDIT" />
             <span>{{ t.setupPosition }}</span>
           </button>
           <button
@@ -109,7 +109,7 @@
             class="control-item"
             @click="onEndEditPosition"
           >
-            <ButtonIcon :icon="Icon.CHECK" />
+            <Icon :icon="IconType.CHECK" />
             <span>{{ t.completePositionSetup }}</span>
           </button>
           <button
@@ -117,7 +117,7 @@
             class="control-item"
             @click="onChangeTurn"
           >
-            <ButtonIcon :icon="Icon.SWAP" />
+            <Icon :icon="IconType.SWAP" />
             <span>{{ t.changeTurn }}</span>
           </button>
           <button
@@ -136,7 +136,7 @@
             data-hotkey="Control+,"
             @click="onOpenAppSettings"
           >
-            <ButtonIcon :icon="Icon.SETTINGS" />
+            <Icon :icon="IconType.SETTINGS" />
             <span>{{ t.appSettings }}</span>
           </button>
           <button
@@ -145,15 +145,15 @@
             :disabled="!controlStates.engineSettings"
             @click="onOpenEngineSettings"
           >
-            <ButtonIcon :icon="Icon.ENGINE_SETTINGS" />
+            <Icon :icon="IconType.ENGINE_SETTINGS" />
             <span>{{ t.engineSettings }}</span>
           </button>
           <button class="control-item" data-hotkey="Control+t" @click="onFlip">
-            <ButtonIcon :icon="Icon.FLIP" />
+            <Icon :icon="IconType.FLIP" />
             <span>{{ t.flipBoard }}</span>
           </button>
           <button class="control-item" @click="onFileAction">
-            <ButtonIcon :icon="Icon.FILE" />
+            <Icon :icon="IconType.FILE" />
             <span>{{ t.file }}</span>
           </button>
           <button
@@ -162,7 +162,7 @@
             :disabled="!controlStates.removeCurrentMove"
             @click="onRemoveCurrentMove"
           >
-            <ButtonIcon :icon="Icon.DELETE" />
+            <Icon :icon="IconType.DELETE" />
             <span>{{ t.deleteMove }}</span>
           </button>
         </div>
@@ -192,10 +192,10 @@ import BoardView from "@/renderer/view/primitive/BoardView.vue";
 import { Move, PositionChange, RecordMetadataKey } from "@/common/shogi";
 import { RectSize } from "@/common/graphics.js";
 import { useStore } from "@/renderer/store";
-import ButtonIcon from "@/renderer/view/primitive/ButtonIcon.vue";
+import Icon from "@/renderer/view/primitive/Icon.vue";
 import { AppState } from "@/common/control/state.js";
 import { humanPlayer } from "@/renderer/players/human";
-import { Icon } from "@/renderer/assets/icons";
+import { IconType } from "@/renderer/assets/icons";
 import GameMenu from "@/renderer/view/menu/GameMenu.vue";
 import FileMenu from "@/renderer/view/menu/FileMenu.vue";
 import InitialPositionMenu from "@/renderer/view/menu/InitialPositionMenu.vue";
@@ -210,7 +210,7 @@ export default defineComponent({
   name: "BoardPane",
   components: {
     BoardView,
-    ButtonIcon,
+    Icon,
     GameMenu,
     FileMenu,
     InitialPositionMenu,
@@ -444,7 +444,7 @@ export default defineComponent({
       onFlip,
       onFileAction,
       onRemoveCurrentMove,
-      Icon,
+      IconType,
       AppState,
     };
   },

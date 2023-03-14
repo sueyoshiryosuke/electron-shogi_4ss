@@ -9,11 +9,11 @@
           :class="{ selected: activeTab === tab }"
           @click="changeSelect(tab)"
         >
-          <ButtonIcon :icon="tabs[tab].icon" />
+          <Icon :icon="tabs[tab].icon" />
           <span>{{ tabs[tab].title }}</span>
         </div>
         <div v-if="displayMinimizeToggle" class="tab end" @click="minimize">
-          <ButtonIcon :icon="Icon.ARROW_DROP" />
+          <Icon :icon="IconType.ARROW_DROP" />
           <span>{{ t.hideTabView }}</span>
         </div>
       </div>
@@ -62,9 +62,9 @@ import EvaluationChart, {
 } from "@/renderer/view/tab/EvaluationChart.vue";
 import RecordInfo from "@/renderer/view/tab/RecordInfo.vue";
 import { RectSize } from "@/common/graphics.js";
-import ButtonIcon from "@/renderer/view/primitive/ButtonIcon.vue";
+import Icon from "@/renderer/view/primitive/Icon.vue";
 import { Tab } from "@/common/settings/app";
-import { Icon } from "@/renderer/assets/icons";
+import { IconType } from "@/renderer/assets/icons";
 import { t } from "@/common/i18n";
 
 export const headerHeight = 30;
@@ -76,7 +76,7 @@ export default defineComponent({
     EngineAnalytics,
     EvaluationChart,
     RecordInfo,
-    ButtonIcon,
+    Icon,
   },
   props: {
     size: {
@@ -107,31 +107,31 @@ export default defineComponent({
     const tabs = {
       [Tab.RECORD_INFO]: {
         title: t.recordProperties,
-        icon: Icon.DESCRIPTION,
+        icon: IconType.DESCRIPTION,
       },
       [Tab.COMMENT]: {
         title: t.comments,
-        icon: Icon.COMMENT,
+        icon: IconType.COMMENT,
       },
       [Tab.SEARCH]: {
         title: t.searchLog,
-        icon: Icon.BRAIN,
+        icon: IconType.BRAIN,
       },
       [Tab.PV]: {
         title: t.pv,
-        icon: Icon.PV,
+        icon: IconType.PV,
       },
       [Tab.CHART]: {
         title: t.evaluation,
-        icon: Icon.CHART,
+        icon: IconType.CHART,
       },
       [Tab.PERCENTAGE_CHART]: {
         title: t.estimatedWinRate,
-        icon: Icon.PERCENT,
+        icon: IconType.PERCENT,
       },
       [Tab.INVISIBLE]: {
         title: t.hideTabView,
-        icon: Icon.ARROW_DROP,
+        icon: IconType.ARROW_DROP,
       },
     };
 
@@ -142,7 +142,7 @@ export default defineComponent({
       minimize,
       tabs,
       Tab,
-      Icon,
+      IconType,
       EvaluationChartType,
     };
   },

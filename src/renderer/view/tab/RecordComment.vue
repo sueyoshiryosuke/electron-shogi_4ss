@@ -15,7 +15,7 @@
           class="play"
           @click="play(pv)"
         >
-          <ButtonIcon :icon="Icon.PLAY" />
+          <Icon :icon="IconType.PLAY" />
           <span>{{ t.pv }}{{ pvs.length >= 2 ? " " + (index + 1) : "" }}</span>
         </button>
       </div>
@@ -34,9 +34,9 @@ import { t } from "@/common/i18n";
 import { useStore } from "@/renderer/store";
 import { AppState } from "@/common/control/state.js";
 import { computed, defineComponent, onMounted, ref, Ref } from "vue";
-import ButtonIcon from "@/renderer/view/primitive/ButtonIcon.vue";
+import Icon from "@/renderer/view/primitive/Icon.vue";
 import PVPreviewDialog from "@/renderer/view/dialog/PVPreviewDialog.vue";
-import { Icon } from "@/renderer/assets/icons";
+import { IconType } from "@/renderer/assets/icons";
 import { Move } from "@/common/shogi";
 
 type Preview = {
@@ -47,7 +47,7 @@ type Preview = {
 export default defineComponent({
   name: "RecordComment",
   components: {
-    ButtonIcon,
+    Icon,
     PVPreviewDialog,
   },
   setup() {
@@ -88,7 +88,7 @@ export default defineComponent({
 
     return {
       t,
-      Icon,
+      IconType,
       comment,
       pvs,
       textarea,

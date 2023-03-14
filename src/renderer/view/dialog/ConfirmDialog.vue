@@ -2,7 +2,7 @@
   <div>
     <dialog ref="dialog" class="confirm">
       <div class="message-box">
-        <ButtonIcon :icon="Icon.QUESTION" />
+        <Icon :icon="IconType.QUESTION" />
         <div class="message">{{ store.confirmation }}</div>
       </div>
       <div class="main-buttons">
@@ -21,9 +21,9 @@
 import { t } from "@/common/i18n";
 import { showModalDialog } from "@/renderer/helpers/dialog.js";
 import { defineComponent, onBeforeUnmount, onMounted, ref, Ref } from "vue";
-import ButtonIcon from "@/renderer/view/primitive/ButtonIcon.vue";
+import Icon from "@/renderer/view/primitive/Icon.vue";
 import { useStore } from "@/renderer/store";
-import { Icon } from "@/renderer/assets/icons";
+import { IconType } from "@/renderer/assets/icons";
 import {
   installHotKeyForDialog,
   uninstallHotKeyForDialog,
@@ -32,7 +32,7 @@ import {
 export default defineComponent({
   name: "InfoMessage",
   components: {
-    ButtonIcon,
+    Icon,
   },
   setup() {
     const store = useStore();
@@ -61,7 +61,7 @@ export default defineComponent({
       store,
       onOk,
       onClose,
-      Icon,
+      IconType,
     };
   },
 });
