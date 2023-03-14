@@ -268,6 +268,7 @@ export default defineComponent({
   overflow-y: scroll;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 5px;
   color: var(--text-color);
   background-color: var(--text-bg-color);
 }
