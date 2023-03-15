@@ -30,7 +30,7 @@
       </div>
       <div class="control-items">
         <div>
-          <span class="form-item-label">{{ t.size }}</span>
+          <span class="control-item-label">{{ t.size }}</span>
           <input
             ref="imageSize"
             class="size"
@@ -46,7 +46,7 @@
             hidden: appSetting.positionImageStyle === PositionImageStyle.GAME,
           }"
         >
-          <span class="form-item-label">{{ t.title }}</span>
+          <span class="control-item-label">{{ t.title }}</span>
           <input
             ref="headerText"
             class="header"
@@ -289,6 +289,10 @@ export default defineComponent({
 }
 .control-items > * {
   margin: 0 5px;
+}
+.control-item-label {
+  text-align: left;
+  margin-right: 5px;
 }
 .hidden {
   display: none;
