@@ -231,9 +231,6 @@ export default defineComponent({
   display: flex;
   flex-direction: row;
 }
-.engine.hidden {
-  display: none;
-}
 .engine-name {
   text-align: left;
   width: 450px;

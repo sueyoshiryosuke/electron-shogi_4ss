@@ -28,38 +28,31 @@
           :white-player-name="whitePlayerName"
         />
       </div>
-      <div class="control-items">
-        <div>
-          <span class="control-item-label">{{ t.size }}</span>
-          <input
-            ref="imageSize"
-            class="size"
-            type="number"
-            min="400"
-            max="2000"
-            @input="changeSize"
-          />
-          <span class="form-item-unit">px</span>
-        </div>
-        <div
-          :class="{
-            hidden: appSetting.positionImageStyle === PositionImageStyle.GAME,
-          }"
-        >
-          <span class="control-item-label">{{ t.title }}</span>
-          <input
-            ref="headerText"
-            class="header"
-            :placeholder="t.typeCustomTitleHere"
-            @input="changeHeaderText"
-          />
-        </div>
-      </div>
-      <div class="control-items">
+      <div class="form-item center">
         <select :value="appSetting.positionImageStyle" @change="changeType">
           <option :value="PositionImageStyle.BOOK">{{ t.bookStyle }}</option>
           <option :value="PositionImageStyle.GAME">{{ t.gameStyle }}</option>
         </select>
+        <input
+          ref="imageSize"
+          class="size"
+          type="number"
+          min="400"
+          max="2000"
+          @input="changeSize"
+        />
+        <span class="form-item-unit">px</span>
+        <input
+          ref="headerText"
+          :class="{
+            hidden: appSetting.positionImageStyle === PositionImageStyle.GAME,
+          }"
+          class="header"
+          :placeholder="t.typeCustomTitleHere"
+          @input="changeHeaderText"
+        />
+      </div>
+      <div class="form-item center">
         <button
           class="standard"
           autofocus
@@ -279,23 +272,6 @@ export default defineComponent({
 }
 .board.book {
   background-color: white;
-}
-.control-items {
-  display: flex;
-  flex-direction: row;
-  margin-top: 5px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.control-items > * {
-  margin: 0 5px;
-}
-.control-item-label {
-  text-align: left;
-  margin-right: 5px;
-}
-.hidden {
-  display: none;
 }
 input.size {
   width: 50px;

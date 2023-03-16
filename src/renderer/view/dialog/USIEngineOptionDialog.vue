@@ -363,9 +363,6 @@ export default defineComponent({
   flex-direction: row;
   border-bottom: 1px solid var(--text-separator-color);
 }
-.option.hidden {
-  display: none;
-}
 .option-filter {
   margin: 0px 5px 5px 5px;
 }

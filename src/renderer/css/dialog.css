@@ -45,7 +45,7 @@ dialog .form-area {
   padding: 10px;
 }
 
-dialog .form-area:nth-of-type(n+2) {
+dialog .form-area:nth-child(n+2) {
   margin-top: 10px;
 }
 
@@ -55,7 +55,7 @@ dialog .form-area-row {
   justify-content: space-between;
 }
 
-dialog .form-area-row:nth-of-type(n+2) {
+dialog .form-area-row:nth-child(n+2) {
   margin-top: 10px;
 }
 
@@ -67,16 +67,21 @@ dialog .form-item {
   text-align: left;
 }
 
-dialog .form-item.center {
-  text-align: center;
+dialog .form-item:nth-child(n+2) {
+  margin-top: 5px;
 }
 
 dialog .form-item > * {
   vertical-align: middle;
 }
 
-dialog .form-item:nth-of-type(n+2) {
-  margin-top: 5px;
+dialog .form-item.center {
+  text-align: center;
+}
+
+dialog .form-item.center > *:nth-child(n+2) {
+  display: inline-block;
+  margin-left: 5px;
 }
 
 dialog .form-item label {
@@ -97,6 +102,13 @@ dialog .form-item-label-wide {
   width: 160px;
 }
 
+dialog .center .form-item-label {
+  display: inline-block;
+  text-align: center;
+  margin-right: 5px;
+  width: auto;
+}
+
 dialog .form-item-unit {
   display: inline-block;
   text-align: left;
@@ -110,7 +122,7 @@ dialog .note {
   font-size: 0.8em;
 }
 
-dialog .note:nth-of-type(n+2) {
+dialog .note:nth-child(n+2) {
   margin-top: 5px;
 }
 
