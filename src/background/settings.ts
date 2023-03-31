@@ -38,11 +38,10 @@ import {
 import { DecryptString, EncryptString, isEncryptionAvailable } from "./encrypt";
 import { getPortableExeDir, isTest } from "./environment";
 
-const userDir = !isTest() ? app.getPath("userData") : "";
-const rootDir = !isTest() ? getPortableExeDir() || app.getPath("userData") : "";
-const docDir = !isTest()
-  ? path.join(app.getPath("documents"), "ElectronShogi")
-  : "";
+const appDir = path.dirname(app.getPath("exe"));  // 実行ファイルのあるフォルダ
+const userDir = !isTest() ? path.join(appDir, "settings") : "";
+const rootDir = !isTest() ? getPortableExeDir() || path.join(appDir, "settings") : "";
+const docDir = !isTest() ? path.join(appDir, "kifu") : "";
 
 export function openSettingsDirectory(): void {
   shell.openPath(rootDir);

@@ -372,10 +372,12 @@ function createMenuTemplate() {
           label: t.howToUse,
           click: openHowToUse,
         },
+/*
         {
           label: t.checkForUpdates,
           click: checkLatestVersion,
         },
+*/
       ],
     },
   ];

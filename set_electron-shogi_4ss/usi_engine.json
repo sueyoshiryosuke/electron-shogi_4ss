@@ -1,0 +1,27 @@
+{
+  "engines": {
+    "es://usi-engine/1680193537377/737aece119ead": {
+      "uri": "es://usi-engine/1680193537377/737aece119ead",
+      "name": "16-168rev2-utf8_20230322",
+      "defaultName": "16-168rev2-utf8_20230322",
+      "author": "R.Sueyoshi",
+      "path": "engine\\16-168rev2\\16-168r2_20230322_utf8.exe",
+      "options": {
+        "USI_Hash": {
+          "name": "USI_Hash",
+          "type": "spin",
+          "order": 1,
+          "default": 32,
+          "vars": []
+        },
+        "USI_Ponder": {
+          "name": "USI_Ponder",
+          "type": "check",
+          "order": 2,
+          "default": "true",
+          "vars": []
+        }
+      }
+    }
+  }
+}

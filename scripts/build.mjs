@@ -10,7 +10,7 @@ const target = process.argv[2];
 * @see https://www.electron.build/configuration/configuration
 */
 const config = {
-  productName: "ElectronShogi",
+  productName: "ElectronShogi4ss",
   extraMetadata: {
     main: "dist/packed/background.js"
   },
@@ -55,6 +55,9 @@ const config = {
 switch (target) {
   case "portable":
     config.win.target = "portable";
+    break;
+  case "zip":
+    config.win.target = "zip";
     break;
 }
 

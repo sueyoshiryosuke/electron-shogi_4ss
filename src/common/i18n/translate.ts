@@ -329,7 +329,7 @@ type Texts = {
 };
 
 const ja: Texts = {
-  electronShogi: "Electron将棋",
+  electronShogi: "Electron将棋for将スタ",
   clear: "初期化",
   open: "開く",
   saveOverwrite: "上書き保存",
@@ -681,7 +681,7 @@ const ja: Texts = {
 };
 
 const en: Texts = {
-  electronShogi: "Electron Shogi",
+  electronShogi: "Electron Shogi for sho-stu",
   clear: "Clear",
   open: "Open",
   saveOverwrite: "Overwrite",
